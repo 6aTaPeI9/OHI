@@ -1,0 +1,15 @@
+C:\Users\Artem\source\repos\OHI\OHI\bin\Debug\OHI.exe.config
+C:\Users\Artem\source\repos\OHI\OHI\bin\Debug\OHI.exe
+C:\Users\Artem\source\repos\OHI\OHI\bin\Debug\OHI.pdb
+C:\Users\Artem\source\repos\OHI\OHI\bin\Debug\MySql.Data.dll
+C:\Users\Artem\source\repos\OHI\OHI\bin\Debug\Google.Protobuf.dll
+C:\Users\Artem\source\repos\OHI\OHI\bin\Debug\MySql.Data.xml
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.csprojAssemblyReference.cache
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.Main.resources
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.Properties.Resources.resources
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.csproj.GenerateResource.cache
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.csproj.CoreCompileInputs.cache
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.csproj.CopyComplete
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.exe
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.pdb
+C:\Users\Artem\source\repos\OHI\OHI\obj\Debug\OHI.QuestPanel.resources
