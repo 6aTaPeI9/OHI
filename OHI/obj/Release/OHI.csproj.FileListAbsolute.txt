@@ -1,0 +1,14 @@
+C:\Users\Artem\source\repos\OHI\OHI\bin\Release\OHI.exe.config
+C:\Users\Artem\source\repos\OHI\OHI\bin\Release\OHI.exe
+C:\Users\Artem\source\repos\OHI\OHI\bin\Release\OHI.pdb
+C:\Users\Artem\source\repos\OHI\OHI\bin\Release\MySql.Data.dll
+C:\Users\Artem\source\repos\OHI\OHI\bin\Release\Google.Protobuf.dll
+C:\Users\Artem\source\repos\OHI\OHI\bin\Release\MySql.Data.xml
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.Main.resources
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.Properties.Resources.resources
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.QuestPanel.resources
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.csproj.GenerateResource.cache
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.csproj.CoreCompileInputs.cache
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.csproj.CopyComplete
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.exe
+C:\Users\Artem\source\repos\OHI\OHI\obj\Release\OHI.pdb

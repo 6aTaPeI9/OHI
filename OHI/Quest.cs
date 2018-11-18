@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace OHI
 {
+    //Класс содержащий всю информацию о вопросах находящихся 
+    //под одним индексом в базе
     public class Quest
     {
         public Quest(string data)
@@ -21,13 +23,15 @@ namespace OHI
         public int SelectedIndex { get; set; }
     }
 
+    //Класс для работы с классом Quest
     public class LinkedQuestList
     {
-        Quest last;
-        Quest first;
-        Quest curent;
-        public int count = 0;
+        Quest last; //Последний элемент
+        Quest first; //Первый элемент
+        Quest curent; //Текущий элемент который видит пользователь
+        public int count = 0; //Количество вопросов
 
+        //Добавляем элемент в класс Quest
         public void Add(string data)
         {
             Quest node = new Quest(data);
@@ -52,6 +56,7 @@ namespace OHI
             count++;
         }
 
+        //Получаем данные предидущего элемента и переключаем текущий
         public string GetPrev()
         {
             if (curent.Previous != null)
@@ -65,6 +70,7 @@ namespace OHI
             }
         }
 
+        //Получаем данные следующего элемента и переключаем текущий
         public string GetNext()
         {
             if (curent.Next != null)
@@ -78,6 +84,7 @@ namespace OHI
             }
         }
 
+        //Получаем данные текущего элемента
         public string GetCur()
         {
             if (curent != null)
@@ -86,6 +93,7 @@ namespace OHI
                 return "None";
         }
 
+        //Устанавливает элемент текущим по индексу.
         public void SetCurByIndex(int index)
         {
             if (index > count)
@@ -103,6 +111,7 @@ namespace OHI
             }
         }
 
+        //Получаем сумму ответов пользователя.
         public int GetHappyIndex()
         {
             int HappyIndex = 0;

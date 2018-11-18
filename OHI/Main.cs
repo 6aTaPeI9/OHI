@@ -17,6 +17,7 @@ namespace OHI
         }
 
 
+        //Добавляем на нашу TableLayout радиобатоны
         private void AddtlpMainRadio()
         {
             string[] quests = _qs.GetCur().Split(';');
@@ -36,6 +37,9 @@ namespace OHI
             }
         }
 
+
+        //Метод запоминает индекс радиобатона который выбрал пользователь 
+        //и окрашивает кнопку с номером вопроса в зеленый цвет
         private void SetSelectedIndex(object sender, System.EventArgs e)
         {
             int i = 1;
@@ -57,7 +61,7 @@ namespace OHI
             }
         }
         
-
+        //Метод заполняет двусвязный список Quests.
         private void FillQuest()
         {
             var sqlconn = sqlconnection.GetDBConnection(ConfigurationManager.ConnectionStrings["MySqlCon"].ConnectionString);
@@ -69,11 +73,12 @@ namespace OHI
                 {
                     string data = "";
                     int iter;
-
+                    //Проходимся по всем записям которые пришли из базы.
                     for (int i = 0; i < myResult.ResultData.Rows.Count - 1; i++)
                     {
                         iter = 0;
                         data = "";
+                        //Группируем записи с одинаковым ID в переменную data добавляя разделить ';'
                         for (int j = 0; (int)myResult.ResultData.Rows[j + i][0] == (int)myResult.ResultData.Rows[i][0]; j++)
                         {
                             data += myResult.ResultData.Rows[j + i][2].ToString() + ";";
@@ -100,9 +105,15 @@ namespace OHI
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Отсутствует подключение к базе данных, повторите попытку позже");
+                Application.Exit();
+            }
             _qs = qs;
         }
 
+        //Заполняем правую панель flowlayout пользовательскими контролами QuestPanel
         private void FillflpIconQuestion()
         {
             QuestPanel qp;
@@ -123,6 +134,7 @@ namespace OHI
             _qs.SetCurByIndex(0);
         }
 
+        //Метод очищает TableLayout от всех radiobutton и заполняет контейнер новыми переключателями
         private void clear_table_layout()
         {
             List<Control> listControls = tlpMainRadio.Controls.Cast<Control>().ToList();
@@ -137,10 +149,12 @@ namespace OHI
             IdQuest.Text = (_qs.GetCurIndex()+1).ToString();
         }
 
+        //Событие при нажатии на один из контролов с номером вопроса
         private void draw_cur_quest(object sender, System.EventArgs e)
         {
             clear_table_layout();
         }
+
 
         private void Main_Load(object sender, System.EventArgs e)
         {
@@ -151,6 +165,7 @@ namespace OHI
 
         private void button1_Click(object sender, System.EventArgs e) => Application.Exit();
 
+        
         private void btnPrev_Click(object sender, EventArgs e)
         {
             _qs.GetPrev();
@@ -163,6 +178,8 @@ namespace OHI
             clear_table_layout();
         }
 
+
+        //Вычисляем результат прохождения теста
         private void btnresult_Click(object sender, EventArgs e)
         {
             float HappyIndex = (float)_qs.GetHappyIndex();
